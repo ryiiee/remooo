@@ -42,7 +42,7 @@ def get_friends():
 @app.route("/friends/<int:id>", methods=["GET"])
 @auth.login_required
 def get_friends_by_id(id):
-    data = data_fetch("""SELECT * FROM friends WHERE friends_id = {}""".format(id))
+    data = data_fetch("""SELECT * FROM freind WHERE friends_id = {}""".format(id))
     myResponse = make_response(jsonify(data))
     return myResponse
     
