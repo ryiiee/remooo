@@ -18,7 +18,7 @@ def verify(username, password):
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_PASSWORD'] = 'apzx0dfd6'
-app.config['MYSQL_DB'] = 'badmiton_reservation'
+app.config['MYSQL_DB'] = ''
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
@@ -42,7 +42,7 @@ def get_friends():
 @app.route("/friends/<int:id>", methods=["GET"])
 @auth.login_required
 def get_friends_by_id(id):
-    data = data_fetch("""SELECT * FROM freind WHERE friends_id = {}""".format(id))
+    data = data_fetch("""SELECT * FROM freinds WHERE friends_id = {}""".format(id))
     myResponse = make_response(jsonify(data))
     return myResponse
     
