@@ -18,7 +18,7 @@ def verify(username, password):
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_PASSWORD'] = 'apzx0dfd6'
-app.config['MYSQL_DB'] = ''
+app.config['MYSQL_DB'] = 'badmiton_reservation'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
